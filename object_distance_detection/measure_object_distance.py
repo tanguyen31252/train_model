@@ -15,7 +15,8 @@ while True:
     # Get frame from realsense camera
     ret, color_image, depth_image = camera.get_frame_stream()
     height, width = color_image.shape[:2]
-    
+
+    #region vẽ tâm khung hình
     center_x, center_y = width//2, height//2
     
     object_detection.draw_object_info(camera,color_image,depth_image)
@@ -24,7 +25,9 @@ while True:
 
     # Trục dọc: từ (center_x, 0) đến (center_x, height)
     color_image = cv2.line(color_image, (center_x, 0), (center_x, height), (0, 255, 0), 2)
+    #endregion
 
+    # hiện vị trí hiện tại của tâm bảng
     object_detection.Xac_dinh_vi_tri(color_image)
 
     # show color image
