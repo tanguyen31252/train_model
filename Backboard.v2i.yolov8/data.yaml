@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['backboard']
+
+roboflow:
+  workspace: tanguyn
+  project: backboard-dl3lc
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tanguyn/backboard-dl3lc/dataset/2
